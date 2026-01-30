@@ -45,7 +45,7 @@ export const EXPERIENCES: Experience[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 'p5',
+    id: 'xPlatform',
     title: 'xPlatform',
     year: '2024',
     description: 'Enterprise Self-Service DevOps Portal accelerating time-to-market from 5 days to 2 hours.',
@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
         {
           sectionTitle: "Design Architecture: Standardization & Scalability",
           content: "Developing a robust design system to ensure visual and functional consistency across a complex enterprise platform.",
-          image: "https://i.postimg.cc/kgxgYLkG/281shots-so.png",
+          image: "https://i.postimg.cc/GhFs9Bgy/design-system.png",
           points: [
             "Inter Typeface & Semantic Tokens: A scalable design language for deep technical configurations.",
             "IaC Catalogs: One-click project kickstarts supporting React, Flutter, Kotlin, and more.",
@@ -105,15 +105,15 @@ export const PROJECTS: Project[] = [
         }
       ],
       features: [
-        { title: "Self-Service Catalog", description: "One-click deployment archetypes with pre-defined standards for React, Kotlin, and more.", image: "https://i.postimg.cc/NM1TVR00/Frame-14535.png" },
-        { title: "Financial Dashboard", description: "Real-time visibility into cloud expenses with automated waste mitigation tools like TTL.", image: "https://i.postimg.cc/NM1TVR00/Frame-14535.png" },
-        { title: "Shift-Left Security", description: "Vulnerability scans integrated into the UI for stakeholders to review during approval flows.", image: "https://i.postimg.cc/NM1TVR00/Frame-14535.png" },
-        { title: "CAB Governance", description: "Structured Change Advisory Board system ensuring international audit standards and ISO compliance.", image: "https://i.postimg.cc/NM1TVR00/Frame-14535.png" }
+        { title: "Team of the Year Award", description: "xPlatform won 'Team of the Year – Technology' at the Asian Management Excellence Awards 2024.", image: "https://i.postimg.cc/65rGT7b7/award.png" },
+        { title: "Self-Service Catalog", description: "One-click deployment archetypes with pre-defined standards for React, Kotlin, and more.", image: "https://i.postimg.cc/L6tZhqQj/services.png" },
+        { title: "Financial Dashboard", description: "Real-time visibility into cloud expenses with automated waste mitigation tools like TTL.", image: "https://i.postimg.cc/VLqb5SZt/finance-dashboard.png" },
+        { title: "CAB Governance", description: "Structured Change Advisory Board system ensuring international audit standards and ISO compliance.", image: "https://i.postimg.cc/X7fyXZ1w/cab.png" }
       ]
     }
   },
   {
-    id: 'p3',
+    id: 'rerd',
     title: 'RERD',
     year: '2025',
     description: 'Market data visualization and AI-powered strategic insights for real estate developers.',
@@ -168,14 +168,15 @@ export const PROJECTS: Project[] = [
         }
       ],
       features: [
-        { title: "AI-Driven Strategic Reporting", description: "Transforms raw data into automated reports, reducing manual research time by 70%.", image: "https://i.postimg.cc/3J3jsfmH/Frame-14536.png" },
-        { title: "Localized Radius Analytics", description: "Provides deep geographic insights and property trends based on specific site locations.", image: "https://i.postimg.cc/3J3jsfmH/Frame-14536.png" },
-        { title: "Data-Centric UI/UX", description: "Visualizes complex real estate metrics in a centralized, high-performance dashboard.", image: "https://i.postimg.cc/3J3jsfmH/Frame-14536.png" }
+        { title: "Localized Radius Analytics", description: "Provides deep geographic insights and property trends based on specific site locations.", image: "https://i.postimg.cc/Pr9GP4Jz/Radius.png" },
+        { title: "Data-Centric UI/UX", description: "Visualizes complex real estate metrics in a centralized, high-performance dashboard.", image: "https://i.postimg.cc/fTp4JKyC/uiux.png" },
+              { title: "AI-Driven Strategic Reporting", description: "Transforms raw data into automated reports, reducing manual research time by 70%.", image: "https://i.postimg.cc/9FK3rp0p/report.png" }
+
       ]
     }
   },
   {
-    id: 'p1',
+    id: 'smashx',
     title: 'SmashX',
     year: '2026',
     description: 'A fresh platform for friend groups to organize, book, and gamify badminton sessions.',
@@ -190,7 +191,7 @@ export const PROJECTS: Project[] = [
     details: {
       overview: "SmashX is a social-sports ecosystem that transforms casual badminton sessions into high-stakes competitive arenas. It handles session scheduling, player rankings, and automated financial settlements across mobile platforms.",
       goal: "Reduce 'Social Friction' by automating logistics and fostering long-term engagement through an integrated Elo-based ranking system.",
-      roleDescription: "I led the project from conceptualization to engineering, collaborating with active players to define the core loop and building the real-time sync engine using Supabase.",
+      roleDescription: "I led the project from conceptualization to engineering, collaborating with active players to be define the core loop and building the real-time sync engine using Supabase.",
       impact: "Transformed casual sports meetups into a high-engagement digital arena, reducing scheduling friction by 40% and fostering long-term social commitment through gamified progression.",
       process: [
         {
@@ -233,13 +234,13 @@ export const PROJECTS: Project[] = [
     }
   },
   {
-    id: 'p4',
+    id: 'qchang',
     title: 'QChang',
     year: '2022',
     description: 'Home and living digital platform bridging customers and service providers.',
-    image: 'https://i.postimg.cc/TwBXFWpT/qchang.png',
+    image: 'https://i.postimg.cc/43HjZTw1/cover.png',
     logo: 'https://i.postimg.cc/vmjjZwMK/logo-qchang.png',
-    cardBgColor: '#051A29',
+    cardBgColor: '#131D29',
     technologies: ['Marketplace', 'Mobile'],
     stats: [
         { label: 'User Rating', value: '4.89/5' },
@@ -257,6 +258,7 @@ export const PROJECTS: Project[] = [
         {
           sectionTitle: "The Foundation: Website Audit & Discovery",
           content: "A comprehensive health check-up to diagnose structural problems and gather existing resources.",
+          image: "https://i.postimg.cc/q7xX2h5d/audit.png",
           points: [
             "Resource Gathering: Collected a complete inventory of every screen, feature, and content piece.",
             "Sitemap Analysis: Maped the existing structure to identify deep-seated usability issues.",
@@ -266,6 +268,7 @@ export const PROJECTS: Project[] = [
         {
           sectionTitle: "Building the Blueprint: Designing a New IA",
           content: "Organizing content logically—like a well-laid-out grocery store—to ensure users find services with minimal effort.",
+          image: "https://i.postimg.cc/fLW7Cz6G/Ia.png",
           points: [
             "Streamlined User Flow: Home -> Services -> Choose Sub-service -> Package Detail -> Info -> Confirm -> Payment -> Success.",
             "Discoverability Focus: Reorganized services into a central hub for easier exploration.",
@@ -275,6 +278,7 @@ export const PROJECTS: Project[] = [
         {
           sectionTitle: "Creating Consistency: The Design System",
           content: "Establishing a single source of truth for the design team to ensure scalability and visual cohesion.",
+          image: "https://i.postimg.cc/mryN7z5Z/Ia-1.png",
           points: [
             "Typography: Standardized on DB Heavent to ensure high legibility and reduce eye strain.",
             "Color Palette: Implemented Primary Red for key actions, conditioning users to recognize interactive elements.",
@@ -284,6 +288,11 @@ export const PROJECTS: Project[] = [
         {
           sectionTitle: "Bringing it to Life: Finalizing the UI",
           content: "Combining strategic blueprints with visual language to create a polished, pixel-perfect product.",
+          images: [
+            "https://i.postimg.cc/gkKSP0pX/qchang-content-01.png",
+            "https://i.postimg.cc/L86y4M44/qchang-content-02.png",
+            "https://i.postimg.cc/kXy1d5Ct/qchang-content-03.png"
+          ],
           points: [
             "Polishing Details: Applied the design system to every screen, ensuring brand alignment.",
             "Wording Refinement: Adjusted copy to align precisely with Q-CHANG's brand characteristics.",
@@ -293,6 +302,7 @@ export const PROJECTS: Project[] = [
         {
           sectionTitle: "Measuring Success: The Impact",
           content: "Validating the redesign through real-world engagement and positive user sentiment.",
+          image: "https://i.postimg.cc/MTZ056Cq/review.png",
           points: [
             "High User Satisfaction: Achieved a 4.89/5 average rating across 3,100+ active users.",
             "Continuous Improvement: Established a feedback loop to iterate based on detailed user suggestions.",
@@ -301,9 +311,8 @@ export const PROJECTS: Project[] = [
         }
       ],
       features: [
-        { title: "Standardized Service Hub", description: "Centralized location for all 2,000+ service providers with clear categorization.", image: "https://i.postimg.cc/65fXpy7y/676shots-so.png" },
-        { title: "Fixed Price Booking Flow", description: "Transparent user flow that removes financial ambiguity before confirmation.", image: "https://i.postimg.cc/65fXpy7y/676shots-so.png" },
-        { title: "Verified Reviews System", description: "Integrated feedback mechanism that drove a 4.89 star satisfaction rate.", image: "https://i.postimg.cc/65fXpy7y/676shots-so.png" }
+        { title: "Standardized Service Hub", description: "Centralized location for all 2,000+ service providers with clear categorization.", image: "https://i.postimg.cc/NMG8Ds3Y/services.png" },
+        { title: "Fixed Price Booking Flow", description: "Transparent user flow that removes financial ambiguity before confirmation.", image: "https://i.postimg.cc/YSzfQGsr/booking.png" },
       ]
     }
   }

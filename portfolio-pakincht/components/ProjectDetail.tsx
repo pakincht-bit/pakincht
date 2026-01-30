@@ -51,7 +51,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
           </button>
           <div className="flex items-center gap-3 text-sm font-medium text-text-muted">
             {project.logo && (
-              <img src={project.logo} alt="" className="w-5 h-5 object-contain opacity-80" />
+              <img 
+                src={project.logo} 
+                alt="" 
+                className="w-5 h-5 object-contain opacity-80" 
+                loading="lazy"
+                decoding="async"
+              />
             )}
             {project.title} · {project.year}
           </div>
@@ -62,10 +68,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
         {/* Hero Section */}
         <section className="px-4 py-12 sm:px-8 lg:px-12 sm:py-20">
           <div className="max-w-4xl">
-            <div className="flex items-center gap-6 mb-4">
+            <div className="flex items-center gap-6 mb-8">
               {project.logo && (
                 <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5">
-                  <img src={project.logo} alt={`${project.title} logo`} className="w-full h-full object-contain" />
+                  <img 
+                    src={project.logo} 
+                    alt={`${project.title} logo`} 
+                    className="w-full h-full object-contain" 
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               )}
               <h1 className="text-5xl font-regular leading-tight text-text-main sm:text-7xl tracking-tight">
@@ -74,38 +86,48 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
             </div>
             
             {project.details?.impact && (
-              <p className="text-xl sm:text-2xl text-text-muted mb-10 leading-relaxed font-normal max-w-3xl">
+              <p className="text-xl sm:text-2xl text-text-muted mb-12 leading-relaxed font-normal max-w-3xl">
                 {project.details.impact}
               </p>
             )}
 
-            <div className="flex flex-wrap gap-8 items-center text-text-muted">
-              <div>
-                <p className="text-xs uppercase tracking-widest font-bold mb-1 opacity-50">Year</p>
-                <p className="text-base font-medium text-text-main">{project.year}</p>
+            {/* Metadata Section */}
+            <div className="flex flex-col gap-8 text-text-muted">
+              <div className="flex items-start gap-12 sm:gap-20">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold mb-1.5 opacity-50">Year</p>
+                  <p className="text-base font-medium text-text-main">{project.year}</p>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold mb-1.5 opacity-50">Sector</p>
+                  <p className="text-base font-medium text-text-main">{project.technologies[0]}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest font-bold mb-1 opacity-50">Sector</p>
-                <p className="text-base font-medium text-text-main">{project.technologies[0]}</p>
-              </div>
+              
               {project.link && (
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="inline-flex items-center gap-2 px-6 py-2 bg-text-main text-bg-main rounded-full text-sm font-bold hover:bg-white transition-colors"
-                >
-                  Visit Site <ExternalLink size={14} />
-                </a>
+                <div className="pt-2">
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="inline-flex items-center gap-2 text-sm font-bold text-text-main hover:text-brand-blue transition-colors group/link"
+                  >
+                    Visit Live Site 
+                    <ExternalLink size={14} className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                  </a>
+                </div>
               )}
             </div>
           </div>
 
-          <div className="mt-16 overflow-hidden rounded-[2.5rem] border border-white/5 aspect-[16/9] sm:aspect-[21/9] bg-bg-card">
+          {/* Hero Image */}
+          <div className="mt-10 overflow-hidden rounded-[2.5rem] border border-white/5 aspect-[16/9] sm:aspect-video bg-bg-card">
             <img 
               src={project.image} 
               alt={project.title} 
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </section>
@@ -161,6 +183,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                               src={feature.image} 
                               alt={feature.title} 
                               className="h-full w-full object-cover"
+                              loading="lazy"
+                              decoding="async"
                             />
                           ) : (
                             <div className="h-full w-full bg-gradient-to-br from-bg-card to-bg-main" />
@@ -242,9 +266,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                 {project.details.process.map((slide, i) => (
                   <div key={i} className="group/slide scroll-mt-32">
                     <div className="max-w-3xl">
-                      <h3 className="text-3xl font-medium text-text-main mb-8 tracking-tight flex items-center gap-6">
-                        <span className="flex items-center justify-center w-10 h-10 rounded-full bg-brand-accent/10 text-sm font-bold text-brand-accent border border-brand-accent/20">0{i+1}</span>
-                        {slide.sectionTitle}
+                      <h3 className="text-3xl font-medium text-text-main mb-8 tracking-tight flex items-start sm:items-center gap-6">
+                        <span className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-brand-accent/10 text-sm font-bold text-brand-accent border border-brand-accent/20">0{i+1}</span>
+                        <span className="pt-0.5">{slide.sectionTitle}</span>
                       </h3>
                       <p className="text-xl text-text-muted mb-10 leading-relaxed">
                         {slide.content}
@@ -259,9 +283,29 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                         </ul>
                       )}
                     </div>
-                    {slide.image && (
+                    {slide.images ? (
+                      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                        {slide.images.map((img, idx) => (
+                          <div key={idx} className="rounded-[1.5rem] overflow-hidden border border-white/5 shadow-inner bg-bg-card/50">
+                            <img 
+                              src={img} 
+                              alt={`${slide.sectionTitle} - ${idx + 1}`} 
+                              className="w-full h-auto" 
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    ) : slide.image && (
                       <div className="mt-12 rounded-[2.5rem] overflow-hidden border border-white/5 shadow-inner bg-bg-card/50">
-                         <img src={slide.image} alt={slide.sectionTitle} className="w-full h-auto" />
+                         <img 
+                            src={slide.image} 
+                            alt={slide.sectionTitle} 
+                            className="w-full h-auto" 
+                            loading="lazy"
+                            decoding="async"
+                          />
                       </div>
                     )}
                   </div>
@@ -286,6 +330,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                     src={other.image} 
                     alt={other.title} 
                     className="w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="flex justify-between items-center px-2">

@@ -12,6 +12,7 @@ export interface ProjectDetailContent {
   sectionTitle: string;
   content: string;
   image?: string;
+  images?: string[];
   points?: string[];
 }
 
