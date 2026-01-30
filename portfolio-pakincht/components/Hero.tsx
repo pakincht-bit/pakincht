@@ -1,3 +1,4 @@
+
 import React from 'react';
 import RollingLink from './RollingLink';
 
@@ -15,12 +16,11 @@ const Hero: React.FC = () => {
               target="_blank" 
               rel="noreferrer" 
               className="font-semibold text-white"
+              autoRoll={true}
             />.
           </span>
         </h1>
       </div>
-      
-     
     </section>
   );
 };

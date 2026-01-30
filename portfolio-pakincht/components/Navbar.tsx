@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, FileText } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import RollingLink from './RollingLink';
 
 const Navbar: React.FC = () => {
@@ -37,13 +37,12 @@ const Navbar: React.FC = () => {
         </li>
         <li>
           <a 
-            href="#" 
+            href="https://drive.google.com/file/d/1YKZMsIFGna-Wv_SDxNOOZy2_Uhd8170q/view?usp=sharing" 
             target="_blank" 
             rel="noreferrer" 
-            className="flex items-center justify-center w-10 h-10 text-text-muted hover:text-text-main hover:bg-white/5 rounded-full transition-all duration-300"
-            aria-label="Resume"
+            className="flex items-center px-4 h-10 text-sm font-medium text-text-muted hover:text-text-main hover:bg-white/5 rounded-full border border-white/5 transition-all duration-300 uppercase tracking-widest"
           >
-            <FileText size={20} strokeWidth={1.5} fill="currentColor" fillOpacity={0.2} />
+            resume
           </a>
         </li>
       </ul>
