@@ -10,11 +10,11 @@ const Hero: React.FC = () => {
           Designer based in Bangkok,
           <span className="block mt-2">
             Currently working at{' '}
-            <RollingLink 
+            <RollingLink
               name="SCBTechX"
-              href="https://scbtechx.io" 
-              target="_blank" 
-              rel="noreferrer" 
+              href="https://scbtechx.io"
+              target="_blank"
+              rel="noreferrer"
               className="font-semibold text-white"
               autoRoll={true}
             />.

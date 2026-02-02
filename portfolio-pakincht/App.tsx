@@ -5,13 +5,14 @@ import Hero from './components/Hero';
 import ExperienceSection from './components/ExperienceSection';
 import ProjectSection from './components/ProjectSection';
 import ProjectDetail from './components/ProjectDetail';
+import IsoLevelWarp from './components/IsoLevelWarp';
 import { ABOUT_TEXT, PROJECTS } from './constants';
 
 // Added delay prop to ScrollReveal to support staggered animations
-const ScrollReveal: React.FC<{ 
-  children: React.ReactNode; 
-  className?: string; 
-  id?: string; 
+const ScrollReveal: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
   'aria-label'?: string;
   delay?: number;
 }> = ({ children, className, id, 'aria-label': ariaLabel, delay = 0 }) => {
@@ -41,9 +42,8 @@ const ScrollReveal: React.FC<{
       ref={domRef}
       id={id}
       aria-label={ariaLabel}
-      className={`${className} transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-      }`}
+      className={`${className} transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        }`}
       style={{ transitionDelay: isVisible ? `${delay}ms` : '0ms' }}
     >
       {children}
@@ -85,10 +85,10 @@ const App: React.FC = () => {
   if (selectedProjectId && selectedProject) {
     return (
       <div className="relative min-h-screen bg-bg-main font-sans text-text-main">
-        <ProjectDetail 
-          project={selectedProject} 
-          onBack={handleBackToHome} 
-          onNavigate={handleSelectProject} 
+        <ProjectDetail
+          project={selectedProject}
+          onBack={handleBackToHome}
+          onNavigate={handleSelectProject}
         />
       </div>
     );
@@ -108,16 +108,17 @@ const App: React.FC = () => {
 
           {/* Centered Content Block (About & Experience) */}
           <div className="max-w-4xl mx-auto">
-            
+
             {/* Bio / About - Each paragraph now reveals in order with staggered delay */}
-            <div id="about" className="mb-48 scroll-mt-24" aria-label="About me">
-              <div className="text-text-muted leading-tight space-y-10 font-normal text-2xl sm:text-3xl lg:text-4xl text-left tracking-tight">
+            <div id="about" className="relative mb-48 scroll-mt-24 overflow-hidden rounded-3xl" aria-label="About me">
+              <IsoLevelWarp className="opacity-20" speed={0.5} />
+              <div className="relative z-10 p-8 sm:p-12 text-text-muted leading-tight space-y-10 font-normal text-2xl sm:text-3xl lg:text-4xl text-left tracking-tight">
                 {ABOUT_TEXT.split('\n\n').filter(p => p.trim() !== '').map((paragraph, i) => (
-                    <ScrollReveal key={i} delay={i * 200}>
-                      <p className="text-text-main/90 hover:text-text-main transition-colors duration-500 cursor-default">
-                        {paragraph.trim()}
-                      </p>
-                    </ScrollReveal>
+                  <ScrollReveal key={i} delay={i * 200}>
+                    <p className="text-text-main/90 hover:text-text-main transition-colors duration-500 cursor-default">
+                      {paragraph.trim()}
+                    </p>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>
