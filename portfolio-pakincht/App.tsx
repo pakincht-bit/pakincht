@@ -6,6 +6,7 @@ import ExperienceSection from './components/ExperienceSection';
 import ProjectSection from './components/ProjectSection';
 import ProjectDetail from './components/ProjectDetail';
 import IsoLevelWarp from './components/IsoLevelWarp';
+import { Analytics } from "@vercel/analytics/react";
 import { ABOUT_TEXT, PROJECTS } from './constants';
 
 // Added delay prop to ScrollReveal to support staggered animations
@@ -90,6 +91,7 @@ const App: React.FC = () => {
           onBack={handleBackToHome}
           onNavigate={handleSelectProject}
         />
+        <Analytics />
       </div>
     );
   }
@@ -139,6 +141,7 @@ const App: React.FC = () => {
           </footer>
         </main>
       </div>
+      <Analytics />
     </div>
   );
 };
