@@ -25,28 +25,27 @@ const ExperienceItem: React.FC<{ exp: typeof EXPERIENCES[0]; index: number }> = 
   }, []);
 
   return (
-    <li 
+    <li
       ref={domRef}
-      className={`group relative transition-all duration-1000 transform delay-[${index * 100}ms] ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
+      className={`group relative transition-all duration-1000 transform delay-[${index * 100}ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
     >
       <div className="grid sm:grid-cols-4 gap-4 sm:gap-8">
         <header className="text-xs font-medium uppercase tracking-wide text-text-muted pt-1">
           {exp.period}
         </header>
         <div className="sm:col-span-3">
-          <h3 className="text-xl font-medium text-text-main transition-colors">
-            <a 
-              href={exp.link || '#'} 
+          <h3 className="text-xl font-medium leading-none text-text-main transition-colors">
+            <a
+              href={exp.link || '#'}
               className="inline-flex items-center gap-1"
               target={exp.link ? "_blank" : undefined}
               rel={exp.link ? "noreferrer" : undefined}
             >
               <span>{exp.role} · {exp.company}</span>
-              <ArrowUpRight 
-                size={16} 
-                className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 shrink-0 text-text-muted group-hover:text-text-main" 
+              <ArrowUpRight
+                size={16}
+                className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 shrink-0 text-text-muted group-hover:text-text-main"
               />
             </a>
           </h3>

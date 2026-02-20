@@ -1,126 +1,176 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO & Meta Tags -->
-    <title>Pakin Chitwaranggoon — Product Designer</title>
-    <meta name="title" content="Pakin Chitwaranggoon — Product Designer" />
-    <meta name="description" content="Product designer - Bridging Business Strategy, User Experience, and AI-Powered Product Development through Technical Engineering." />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/j2dyyPgt/logo.png" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pakincht.com/" />
-    <meta property="og:title" content="Pakin Chitwaranggoon — Product Designer" />
-    <meta property="og:description" content="Product designer - Bridging Business Strategy, User Experience, and AI-Powered Product Development through Technical Engineering." />
-    <meta property="og:image" content="https://i.postimg.cc/WpKBW8VH/seo-og.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://pakincht.com/" />
-    <meta property="twitter:title" content="Pakin Chitwaranggoon — Product Designer" />
-    <meta property="twitter:description" content="Product designer - Bridging Business Strategy, User Experience, and AI-Powered Product Development through Technical Engineering." />
-    <meta property="twitter:image" content="https://i.postimg.cc/WpKBW8VH/seo-og.png" />
+  <!-- SEO & Meta Tags -->
+  <title>Pakin Chitwaranggoon — Product Designer</title>
+  <meta name="title" content="Pakin Chitwaranggoon — Product Designer" />
+  <meta name="description"
+    content="Product designer - Bridging Business Strategy, User Experience, and AI-Powered Product Development through Technical Engineering." />
 
-    <!-- Outfit is a very close alternative to Google Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Process polyfill to prevent "Uncaught ReferenceError: process is not defined"
-      window.process = { 
-        env: { 
-          NODE_ENV: 'production',
-          API_KEY: '' // Will be injected by the environment
-        } 
-      };
-      
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Outfit"', 'sans-serif'],
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/j2dyyPgt/logo.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pakincht.com/" />
+  <meta property="og:title" content="Pakin Chitwaranggoon — Product Designer" />
+  <meta property="og:description"
+    content="Product designer - Bridging Business Strategy, User Experience, and AI-Powered Product Development through Technical Engineering." />
+  <meta property="og:image" content="https://i.postimg.cc/WpKBW8VH/seo-og.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://pakincht.com/" />
+  <meta property="twitter:title" content="Pakin Chitwaranggoon — Product Designer" />
+  <meta property="twitter:description"
+    content="Product designer - Bridging Business Strategy, User Experience, and AI-Powered Product Development through Technical Engineering." />
+  <meta property="twitter:image" content="https://i.postimg.cc/WpKBW8VH/seo-og.png" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Process polyfill to prevent "Uncaught ReferenceError: process is not defined"
+    window.process = {
+      env: {
+        NODE_ENV: 'production',
+        API_KEY: '' // Will be injected by the environment
+      }
+    };
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            bg: {
+              main: 'var(--surface-main)',
+              card: 'var(--surface-alt)',
+              elevated: 'var(--surface-elevated)',
             },
-            colors: {
-              bg: {
-                main: '#191B1F',
-                card: '#232730',
-              },
-              text: {
-                main: '#E0E0E1',
-                muted: '#CACFDA',
-              },
-              brand: {
-                accent: '#CACFDA',
-                highlight: 'rgba(202, 207, 218, 0.1)',
-                blue: '#007AFF'
-              }
+            text: {
+              main: 'var(--text-main)',
+              muted: 'var(--text-muted)',
+              subtle: 'var(--text-subtle)',
+            },
+            brand: {
+              accent: 'var(--brand-accent)',
+              highlight: 'rgba(94, 106, 210, 0.15)',
+              blue: 'var(--brand-primary)'
             }
+          },
+          keyframes: {
+            blurIn: {
+              '0%': { filter: 'blur(10px)', opacity: '0', transform: 'translateY(10px)' },
+              '100%': { filter: 'blur(0)', opacity: '1', transform: 'translateY(0)' },
+            }
+          },
+          animation: {
+            'blur-in': 'blurIn 2s cubic-bezier(0.23, 1, 0.32, 1) forwards',
           }
         }
       }
-    </script>
-    <style>
-      :root {
-        --brand-primary: #007AFF;
-        --surface-main: #191B1F;
-        --surface-alt: #232730;
-        --text-main: #E0E0E1;
-        --text-muted: #CACFDA;
-        --radius-interactive: 12px;
-      }
+    }
+  </script>
+  <style>
+    :root {
+      /* Linear-like Dark Theme */
+      --surface-main: #0E1015;
+      /* Deep dark background */
+      --surface-alt: #1C1E26;
+      /* Slightly lighter for cards */
+      --surface-elevated: #262933;
+      /* For modals/dropdowns */
 
-      body {
-        background-color: var(--surface-main);
-        color: var(--text-main);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
-      }
-      
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-        height: 4px;
-      }
-      ::-webkit-scrollbar-track {
-        background: var(--surface-main);
-      }
-      ::-webkit-scrollbar-thumb {
-        background: var(--surface-alt);
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #333;
-      }
+      /* Typography Colors - Using HSL/RGBA for better blending */
+      --text-main: rgba(255, 255, 255, 0.95);
+      --text-muted: rgba(255, 255, 255, 0.65);
+      --text-subtle: rgba(255, 255, 255, 0.45);
 
-      /* No scrollbar utility */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
+      /* Brand Colors */
+      --brand-primary: #5E6AD2;
+      /* Linear Purple-Blue */
+      --brand-accent: #5E6AD2;
 
-      /* Selection styling */
-      ::selection {
-        background: var(--brand-primary);
-        color: white;
-      }
+      /* Typography Settings */
+      --font-features: "cv02", "cv03", "cv04", "cv11";
+      /* Tech look */
+      --tracking-tight: -0.015em;
+      --leading-tight: 1.1;
 
-      /* Smooth transition for hover states */
-      .hover-transition {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-    </style>
-    <script type="importmap">
+      --radius-interactive: 6px;
+      /* Linear uses smaller, tighter radii */
+    }
+
+    body {
+      background-color: var(--surface-main);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      font-feature-settings: var(--font-features);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      /* Optimized text rendering */
+      text-rendering: optimizeLegibility;
+      letter-spacing: -0.01em;
+      /* Slight tightening globally */
+    }
+
+    /* Custom Scrollbar to match dark theme */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--surface-main);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2F333C;
+      border-radius: 4px;
+      border: 2px solid var(--surface-main);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #464B56;
+    }
+
+    /* No scrollbar utility */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* Selection styling */
+    ::selection {
+      background: rgba(94, 106, 210, 0.3);
+      /* Brand color with opacity */
+      color: white;
+    }
+
+    /* Smooth transition for hover states */
+    .hover-transition {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+  </style>
+  <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@19.2.4",
@@ -137,10 +187,12 @@
 </script>
   <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
-    <!-- Using a relative path to ensure the module loader resolves the file correctly -->
-    <script type="module" src="./index.tsx"></script>
+
+<body>
+  <div id="root"></div>
+  <!-- Using a relative path to ensure the module loader resolves the file correctly -->
+  <script type="module" src="./index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

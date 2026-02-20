@@ -9,31 +9,31 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ onSelectProject }) => {
   return (
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
       {PROJECTS.map((project) => (
-        <li 
-          key={project.id} 
+        <li
+          key={project.id}
           onClick={() => onSelectProject(project.id)}
-          className="group relative cursor-pointer flex flex-col h-[440px] overflow-hidden rounded-[2.5rem] border border-white/5 p-8 pb-0 gap-8 transition-all duration-500 hover:border-white/10 hover:shadow-2xl hover:shadow-black/20"
-          style={{ backgroundColor: project.cardBgColor || 'var(--bg-card, #232730)' }}
+          className="group relative cursor-pointer flex flex-col h-[440px] lg:h-[490px] overflow-hidden rounded-[2.5rem] border border-white/5 p-8 pb-0 gap-8 transition-all duration-500 hover:border-white/10 hover:shadow-2xl hover:shadow-black/20"
+          style={{ backgroundColor: project.cardBgColor || 'var(--surface-alt)' }}
         >
           {/* Project Icon/Logo */}
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 shadow-inner overflow-hidden">
             {project.logo ? (
-              <img 
-                src={project.logo} 
-                alt={`${project.title} logo`} 
-                className="w-14 h-14 object-contain" 
+              <img
+                src={project.logo}
+                alt={`${project.title} logo`}
+                className="w-14 h-14 object-contain"
               />
             ) : (
               <span className="text-xl font-medium text-text-main opacity-80">{project.title[0]}</span>
             )}
           </div>
-          
+
           {/* Text Content */}
           <div className="space-y-1">
-            <h3 className="text-3xl font-regular tracking-tight text-text-main">
+            <h3 className="text-3xl font-medium leading-none tracking-tight text-text-main">
               {project.title}
             </h3>
-            <p className="text-lg text-text-muted leading-snug max-w-[90%]">
+            <p className="text-lg text-text-muted leading-snug max-w-[90%] pt-3">
               {project.description}
             </p>
           </div>

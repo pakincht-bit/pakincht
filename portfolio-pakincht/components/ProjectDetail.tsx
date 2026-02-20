@@ -42,7 +42,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
       {/* Header / Back */}
       <nav className="sticky top-0 z-50 bg-bg-main/80 backdrop-blur-md border-b border-white/5 px-4 py-4 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl flex items-center justify-between">
-          <button 
+          <button
             onClick={onBack}
             className="group flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-main transition-colors"
           >
@@ -51,10 +51,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
           </button>
           <div className="flex items-center gap-3 text-sm font-medium text-text-muted">
             {project.logo && (
-              <img 
-                src={project.logo} 
-                alt="" 
-                className="w-5 h-5 object-contain opacity-80" 
+              <img
+                src={project.logo}
+                alt=""
+                className="w-5 h-5 object-contain opacity-80"
                 loading="lazy"
                 decoding="async"
               />
@@ -71,20 +71,20 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
             <div className="flex items-center gap-6 mb-8">
               {project.logo && (
                 <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/5">
-                  <img 
-                    src={project.logo} 
-                    alt={`${project.title} logo`} 
-                    className="w-full h-full object-contain" 
+                  <img
+                    src={project.logo}
+                    alt={`${project.title} logo`}
+                    className="w-full h-full object-contain"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
               )}
-              <h1 className="text-5xl font-regular leading-tight text-text-main sm:text-7xl tracking-tight">
+              <h1 className="text-5xl font-medium leading-none text-text-main sm:text-7xl tracking-tight">
                 {project.title}
               </h1>
             </div>
-            
+
             {project.details?.impact && (
               <p className="text-xl sm:text-2xl text-text-muted mb-12 leading-relaxed font-normal max-w-3xl">
                 {project.details.impact}
@@ -103,16 +103,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                   <p className="text-base font-medium text-text-main">{project.technologies[0]}</p>
                 </div>
               </div>
-              
+
               {project.link && (
                 <div className="pt-2">
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noreferrer" 
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-bold text-text-main hover:text-brand-blue transition-colors group/link"
                   >
-                    Visit Live Site 
+                    Visit Live Site
                     <ExternalLink size={14} className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                   </a>
                 </div>
@@ -122,9 +122,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
 
           {/* Hero Image */}
           <div className="mt-10 overflow-hidden rounded-[2.5rem] border border-white/5 aspect-[16/9] sm:aspect-video bg-bg-card">
-            <img 
-              src={project.image} 
-              alt={project.title} 
+            <img
+              src={project.image}
+              alt={project.title}
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"
@@ -146,7 +146,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                   <h2 className="text-xs font-bold uppercase tracking-widest text-text-muted">Key Features</h2>
                   <div className="flex items-center gap-4">
                     <div className="flex gap-2">
-                       <button 
+                      <button
                         onClick={() => scrollByAmount('left')}
                         disabled={scrollProgress <= 0}
                         className={`p-2 rounded-full border border-white/5 bg-bg-card text-text-main transition-all ${scrollProgress <= 0 ? 'opacity-20 cursor-not-allowed' : 'hover:bg-white/10 active:scale-95'}`}
@@ -154,7 +154,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                       >
                         <ChevronLeft size={20} />
                       </button>
-                      <button 
+                      <button
                         onClick={() => scrollByAmount('right')}
                         disabled={scrollProgress >= 100}
                         className={`p-2 rounded-full border border-white/5 bg-bg-card text-text-main transition-all ${scrollProgress >= 100 ? 'opacity-20 cursor-not-allowed' : 'hover:bg-white/10 active:scale-95'}`}
@@ -167,21 +167,21 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                 </div>
 
                 <div className="relative">
-                  <div 
+                  <div
                     ref={scrollRef}
                     onScroll={handleScroll}
                     className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory no-scrollbar scroll-smooth"
                   >
                     {project.details.features.map((feature, i) => (
-                      <div 
-                        key={i} 
+                      <div
+                        key={i}
                         className="flex-shrink-0 w-[85vw] sm:w-[500px] snap-start group/feature"
                       >
                         <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] bg-bg-card border border-white/5 transition-all duration-500 group-hover/feature:border-brand-accent/20">
                           {feature.image ? (
-                            <img 
-                              src={feature.image} 
-                              alt={feature.title} 
+                            <img
+                              src={feature.image}
+                              alt={feature.title}
                               className="h-full w-full object-cover"
                               loading="lazy"
                               decoding="async"
@@ -191,7 +191,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-transparent to-transparent opacity-60" />
                         </div>
-                        
+
                         <div className="mt-8 px-2">
                           <h4 className="text-2xl font-medium text-text-main mb-3 flex items-center gap-3">
                             {feature.title}
@@ -208,11 +208,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
 
                   {/* Carousel Progress Bar */}
                   <div className="h-[2px] w-full bg-white/5 rounded-full overflow-hidden mt-4">
-                    <div 
+                    <div
                       className="h-full bg-brand-accent/30 rounded-full transition-all duration-150"
-                      style={{ 
-                        width: '20%', 
-                        marginLeft: `${scrollProgress * 0.8}%` 
+                      style={{
+                        width: '20%',
+                        marginLeft: `${scrollProgress * 0.8}%`
                       }}
                     />
                   </div>
@@ -247,7 +247,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
               )}
 
               <div className="space-y-4">
-               <h3 className="text-xs font-bold uppercase tracking-widest text-text-muted">My role</h3>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-text-muted">My role</h3>
                 <p className="text-base text-text-muted leading-relaxed font-normal">
                   {project.details?.roleDescription || "I led the product design from research through to final delivery, ensuring alignment between technical constraints and user needs."}
                 </p>
@@ -259,15 +259,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
         {/* Centered Project Details */}
         <section className="px-4 py-20 sm:px-8 lg:px-12 mt-12">
           <div className="max-w-4xl mx-auto space-y-32">
-            
+
             {/* Process Slides */}
             {project.details?.process && (
               <div className="space-y-32">
                 {project.details.process.map((slide, i) => (
                   <div key={i} className="group/slide scroll-mt-32">
                     <div className="max-w-3xl">
-                      <h3 className="text-3xl font-medium text-text-main mb-8 tracking-tight flex items-start sm:items-center gap-6">
-                        <span className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-brand-accent/10 text-sm font-bold text-brand-accent border border-brand-accent/20">0{i+1}</span>
+                      <h3 className="text-3xl font-medium leading-none text-text-main mb-8 tracking-tight flex items-start sm:items-center gap-6">
+                        <span className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-brand-accent/10 text-sm font-bold text-white border border-brand-accent/20">0{i + 1}</span>
                         <span className="pt-0.5">{slide.sectionTitle}</span>
                       </h3>
                       <p className="text-xl text-text-muted mb-10 leading-relaxed">
@@ -276,7 +276,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                       {slide.points && (
                         <ul className="grid sm:grid-cols-1 gap-6 pl-16 mb-12">
                           {slide.points.map((point, idx) => (
-                            <li key={idx} className="relative text-lg text-text-muted/80 leading-relaxed font-normal before:absolute before:-left-8 before:top-4 before:h-px before:w-6 before:bg-brand-accent/30">
+                            <li key={idx} className="relative text-lg text-text-muted leading-relaxed font-normal before:absolute before:-left-8 before:top-4 before:h-px before:w-6 before:bg-brand-accent/30">
                               {point}
                             </li>
                           ))}
@@ -287,10 +287,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
                         {slide.images.map((img, idx) => (
                           <div key={idx} className="rounded-[1.5rem] overflow-hidden border border-white/5 shadow-inner bg-bg-card/50">
-                            <img 
-                              src={img} 
-                              alt={`${slide.sectionTitle} - ${idx + 1}`} 
-                              className="w-full h-auto" 
+                            <img
+                              src={img}
+                              alt={`${slide.sectionTitle} - ${idx + 1}`}
+                              className="w-full h-auto"
                               loading="lazy"
                               decoding="async"
                             />
@@ -299,13 +299,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
                       </div>
                     ) : slide.image && (
                       <div className="mt-12 rounded-[2.5rem] overflow-hidden border border-white/5 shadow-inner bg-bg-card/50">
-                         <img 
-                            src={slide.image} 
-                            alt={slide.sectionTitle} 
-                            className="w-full h-auto" 
-                            loading="lazy"
-                            decoding="async"
-                          />
+                        <img
+                          src={slide.image}
+                          alt={slide.sectionTitle}
+                          className="w-full h-auto"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </div>
                     )}
                   </div>
@@ -320,15 +320,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack, onNaviga
           <h2 className="text-sm font-bold uppercase tracking-widest text-text-muted mb-16 text-center">More Case Studies</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
             {otherProjects.map(other => (
-              <button 
+              <button
                 key={other.id}
                 onClick={() => onNavigate(other.id)}
                 className="group relative flex flex-col gap-6 text-left"
               >
                 <div className="aspect-[16/10] overflow-hidden rounded-[2rem] bg-bg-card border border-white/5">
-                  <img 
-                    src={other.image} 
-                    alt={other.title} 
+                  <img
+                    src={other.image}
+                    alt={other.title}
                     className="w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"

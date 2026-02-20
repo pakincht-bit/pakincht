@@ -43,7 +43,7 @@ const ScrollReveal: React.FC<{
       ref={domRef}
       id={id}
       aria-label={ariaLabel}
-      className={`${className} transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+      className={`${className} transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] transform ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-12 blur-[10px]'
         }`}
       style={{ transitionDelay: isVisible ? `${delay}ms` : '0ms' }}
     >
@@ -98,7 +98,7 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-bg-main text-text-main">
-      <div className="mx-auto max-w-7xl font-sans">
+      <div className="mx-auto max-w-[90rem] font-sans">
         <Navbar />
         <Hero />
 
