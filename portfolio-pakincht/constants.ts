@@ -118,8 +118,9 @@ export const PROJECTS: Project[] = [
     year: '2025',
     description: 'Market data visualization and AI-powered strategic insights for real estate developers.',
     image: 'https://i.postimg.cc/3J3jsfmH/Frame-14536.png',
+    logo: '/rerd-logo.png',
     cardBgColor: '#152529',
-    technologies: ['Real estate','Banking','AI Insights', 'Data Viz'],
+    technologies: ['Real estate', 'Banking', 'AI Insights', 'Data Viz'],
     stats: [{ label: 'Data Points', value: '5M+' }],
     details: {
       overview: "The RERD project is a testament to my ability to lead Digital Transformation. By integrating Google Gemini AI into a high-performance TypeScript environment, I have created a prototype that reduces the cognitive load of real estate professionals, proving that design leadership is about technical feasibility and business intelligence just as much as user experience.",
@@ -170,7 +171,7 @@ export const PROJECTS: Project[] = [
       features: [
         { title: "Localized Radius Analytics", description: "Provides deep geographic insights and property trends based on specific site locations.", image: "https://i.postimg.cc/Pr9GP4Jz/Radius.png" },
         { title: "Data-Centric UI/UX", description: "Visualizes complex real estate metrics in a centralized, high-performance dashboard.", image: "https://i.postimg.cc/fTp4JKyC/uiux.png" },
-              { title: "AI-Driven Strategic Reporting", description: "Transforms raw data into automated reports, reducing manual research time by 70%.", image: "https://i.postimg.cc/9FK3rp0p/report.png" }
+        { title: "AI-Driven Strategic Reporting", description: "Transforms raw data into automated reports, reducing manual research time by 70%.", image: "https://i.postimg.cc/9FK3rp0p/report.png" }
 
       ]
     }
@@ -223,7 +224,7 @@ export const PROJECTS: Project[] = [
             "Social Proofing: Instagram-ready report generation turning user progress into organic marketing."
           ]
         },
-        
+
       ],
       features: [
         { title: "Personalized Avatars", description: "Users can select their favorite avatar and background color to personalize their profile.", image: "https://i.postimg.cc/GtjVR3dm/878shots-so.png" },
@@ -243,9 +244,9 @@ export const PROJECTS: Project[] = [
     cardBgColor: '#131D29',
     technologies: ['Marketplace', 'Mobile'],
     stats: [
-        { label: 'User Rating', value: '4.89/5' },
-        { label: 'Total Reviews', value: '3.1K+' },
-        { label: 'Providers', value: '2k+' }
+      { label: 'User Rating', value: '4.89/5' },
+      { label: 'Total Reviews', value: '3.1K+' },
+      { label: 'Providers', value: '2k+' }
     ],
     details: {
       overview: "Q-CHANG is a home service platform with a clear mission: To help homeowners find reliable services, support technicians to grow their income, and ensure safety for all stakeholders. This redesign transformed a complex, structureless platform into a streamlined, high-rating digital experience.",
