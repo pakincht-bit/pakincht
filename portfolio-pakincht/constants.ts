@@ -44,6 +44,8 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  // --- xPlatform project hidden for now ---
+  /*
   {
     id: 'xPlatform',
     title: 'xPlatform',
@@ -64,14 +66,14 @@ export const PROJECTS: Project[] = [
       roleDescription: "As the Lead Designer, I architected the end-to-end UX strategy, designed the Information Architecture (Dashboard, Management, Security, Setup), and established a design system using the Inter typeface with semantic tokens for enterprise-grade scalability.",
       challenge: "Traditional software deployment typically took 3-5 days, creating a significant lag in product launches. DevOps teams were overwhelmed by manual support requests, and business stakeholders lacked real-time visibility into cloud costs.",
       solution: "A centralized DevOps portal featuring Software & IaC Catalogs, 'Single Pane of Control' for financial governance, and integrated DevSecOps scan results in the approval flow.",
-      impact: "This innovative approach resulted in xPlatform winning the 'Team of the Year – Technology' at the Asian Management Excellence Awards 2024, directly enhancing the organization’s competitive edge.",
+      impact: "This innovative approach resulted in xPlatform winning the 'Team of the Year – Technology' at the Asian Management Excellence Awards 2024, directly enhancing the organization's competitive edge.",
       process: [
         {
           sectionTitle: "Executive Vision: Accelerating Time-to-Market",
           content: "Identifying the business bottleneck where manual deployment processes hindered product launches.",
           points: [
             "DevOps as a Service: Designing an automated portal to reduce lead time from days to hours.",
-            "Business Impact: Directly accelerating the organization’s time-to-market and competitive speed.",
+            "Business Impact: Directly accelerating the organization's time-to-market and competitive speed.",
             "Award Recognition: Winner of 'Team of the Year – Technology' at Asian Management Excellence Awards 2024."
           ]
         },
@@ -112,6 +114,7 @@ export const PROJECTS: Project[] = [
       ]
     }
   },
+  */
   {
     id: 'rerd',
     title: 'RERD',
